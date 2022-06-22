@@ -21,6 +21,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('', include('board.urls')),
     path('', include('members.urls')),
-
-
+    path('', include('sungjuk.urls')),
 ]
