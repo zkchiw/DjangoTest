@@ -3,12 +3,25 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static '/css/DjangoTest.css' %}">
+    <title>{% block title %}Python Web Project V1{% endblock %}</title>
+
+    <style>
+        {% block style %}{% endblock %}
+    </style>
 </head>
+
 <body>
-    {% block content %}{% endblock %}
+<div id="wrap">
+   {% include 'layout/header.html' %}
+    <div id="main">
+        {% block content %}{% endblock %}
+    </div>
+    {% include 'layout/footer.html' %}
+
+</div>
 
 
+    {% block jscript %} {% endblock %}
 </body>
+
 </html>
